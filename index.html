@@ -2,10 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo2.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logoR.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Connects to Google's servers to load DM Sans and Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <!-- SEO -->
 
-    //SEO
     <meta name="description" content="Panbang Ecolodge — stay at the gateway 
     to Royal Manas National Park, Bhutan's oldest wilderness. Book your escape.">
     <meta property="og:title" content="Panbang Ecolodge — Bhutan's Best Kept Secret">
@@ -20,11 +27,11 @@
   </head>
 
   <body>
-    //Header & Nav
+    <!-- Header & Nav -->
     <header class="site-header">
       <nav class="site-nav" aria-label="Main navigation">
         <a href="/" class="nav-logo" aria-label="Panbang Ecolodge Home">
-          <img src="" alt="Panbang Ecolodge Logo">
+          <img src="/logoNav.svg" alt="Panbang Ecolodge Logo">
         </a>
         
         <ul class="nav-links">
@@ -33,27 +40,27 @@
           <li><a href="pages/gallery/">Gallery</a></li>
           <li><a href="pages/about-us/">About Us</a></li>
         </ul>
-        <a href="pages/booking/" class="nav-cta">Book Us</a>
+        <a href="pages/booking/" class="nav-cta">BOOK NOW</a>
       </nav>
     </header>
     <main>
-      //Hero section
+      <!-- Hero Section -->
       <section class="hero" aria-label="Hero Section">
         <div class="hero-content">
           <h1>Bhutan's Best Kept <em>Secret</em></h1>
           <p class="hero-body">No traffic. No noise. No agenda. 
           Just wild Bhutan and people who are glad you came.</p>
             <div class="hero-buttons">
-          <a href="pages/booking/" class="btn-primary">Plan Your Trip</a>
+          <a href="pages/booking/" class="btn-primary">PLAN YOUR TRIP</a>
           <a href="pages/experiences/" class="btn-ghost">Explore -></a>
             </div>
         </div>
         <div class="hero-image">
-          <img src="" alt="Panbang Ecolodge Structure">
+          <img src="/src/assets/hero.webp" alt="Panbang Ecolodge Structure">
         </div>
       </section>
       
-      //The Lodge Life
+      <!-- The Lodge Life -->
 
       <section class="lodge-life">
         <div class="section-header">
@@ -64,7 +71,7 @@
             <div class="cards-row cards-row--top">
               <article class="lodge-card">
                 <div class="card-image">
-                  <img src="" alt="Rafting on Mangdee Chhu River">
+                  <img src="/src/assets/card1.webp" alt="Rafting on Mangdee Chhu River">
                 </div>
                 <div class="card-content">
                   <span class="card-label">01 - ADVENTURE</span>
@@ -73,9 +80,9 @@
                   <a href="pages/experiences/" class="card-link">Explore -></a>
                 </div>
               </article>
-              <article class="lodge-card">
+              <article class="lodge-card card-featured">
                 <div class="card-image">
-                  <img src="" alt="locally sourced oragnic Bhutanese food on the table">
+                  <img src="src/assets/card1.webp" alt="locally sourced oragnic Bhutanese food on the table">
                 </div>
                 <div class="card-content">
                   <span class="card-label">02 - DINING</span>
@@ -86,7 +93,7 @@
               </article>
               <article class="lodge-card">
                 <div class="card-image">
-                  <img src="" alt="locally sourced oragnic Bhutanese food on the table">
+                  <img src="src/assets/card1.webp" alt="locally sourced oragnic Bhutanese food on the table">
                 </div>
                 <div class="card-content">
                   <span class="card-label">03 - STAY</span>
@@ -96,10 +103,10 @@
                 </div>
               </article>
             </div>
-            <div class="card-rows cards-row--bottom">
+            <div class="cards-row cards-row--bottom">
               <article class="lodge-card">
                 <div class="card-image">
-                  <img src="" alt="Eco Trail through protected forest near Panbang">
+                  <img src="src/assets/card1.webp" alt="Eco Trail through protected forest near Panbang">
                 </div>
                 <div class="card-content">
                   <span class="card-label">04 - NATURE</span>
@@ -110,7 +117,7 @@
               </article>
               <article class="lodge-card">
                 <div class="card-image">
-                  <img src="" alt="Bamboo huts near the lodge">
+                  <img src="src/assets/card1.webp" alt="Bamboo huts near the lodge">
                 </div>
                 <div class="card-content">
                   <span class="card-label">05 - OUTSIDE</span>
@@ -123,17 +130,17 @@
           </div>
       </section>
 
-    //Why Stay With Us
+    <!-- Why Stay With Us -->
 
       <section class="sectionThree">
         <div class="section-header">
           <span class="section-tag">WHY STAY WITH US</span>
-          <h2>An Experiences Of A Lifetime</h2>
+          <h2 class="thirdHeader">An Experiences Of A Lifetime</h2>
           <p>Every detail at Panbang Ecolodge is designed to deepen your connection
           with the wild without sacrificing comfort.</p>
         </div>
         <div class="feature">
-          //01
+          <!-- 01 -->
 
           <article class="content-card">
             <div class="feature-text">
@@ -146,18 +153,18 @@
               <a href="pages/experiences/" class="btn-learn">Learn More</a>
             </div>
             <div class="feature-image">
-              <img src="" alt="bull-eating-grass-image">
+              <img src="/src/assets/feature1.webp" alt="bull-eating-grass-image">
             </div>
             </article>
             <div class="divider" aria-hidden="true">
-              <img src="" alt="section-divider-with-leaf-in-the-middle">
+              <img src="src/assets/divider-leaf 1.svg" alt="section-divider-with-leaf-in-the-middle">
             </div>
 
-            //02
+            <!-- 02 -->
 
             <article class="content-card reverse">
               <div class="feature-image">
-                <img src="" alt="Local Panbang staff preparing traditional Bhutanese food">
+                <img src="src/assets/feature2.webp" alt="Local Panbang staff preparing traditional Bhutanese food">
               </div>
             <div class="feature-text">
               <h3>Local Heart</h3>
@@ -171,10 +178,10 @@
             </div>
             </article>
             <div class="divider" aria-hidden="true">
-              <img src="" alt="section-divider-with-leaf-in-the-middle">
+              <img src="src/assets/divider-leaf 1.svg" alt="section-divider-with-leaf-in-the-middle">
             </div>
 
-            //03
+            <!-- 03 -->
 
             <article class="content-card">
             <div class="feature-text">
@@ -187,19 +194,15 @@
               <a href="pages/experiences/" class="btn-learn">Learn More</a>
             </div>
             <div class="feature-image">
-              <img src="" alt="Guests learning rafting on the Mangde Chhu river">
+              <img src="src/assets/feature3.webp" alt="Guests learning rafting on the Mangde Chhu river">
             </div>
             </article>
-            <div class="divider" aria-hidden="true">
-              <img src="" alt="section-divider-with-leaf-in-the-middle">
-            </div>
         </div>
 
-        //Reviews
+        <!-- Reviews -->
 
       </section>
       <section class="sectionFour">
-            <img src="" alt="background-image">
             <div class="section-header">
               <span class="section-tag">Review</span>
               <h2>What Our Traverler Say</h2>
@@ -207,10 +210,10 @@
             <div class="review-cards">
             <article class="review-card">
               <div class="reviewer-info">
-                <img src="" alt="Thunder Dragon Tours and Travels logo">
+                <img src="/src/assets/reviewer1.webp" alt="Thunder Dragon Tours and Travels logo">
                 <h4>Thunder Dragon Tours and Travels</h4>
               </div>
-                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <div class="stars" aria-label="5 out of 5 stars"><img src="src/assets/Stars.svg" alt="stars"></div>
                 <p>The staff are attentive and caring they prepare a deliciousmeal 
                 for their guests with locally sourced veg and non veg items. Recommended minimum 2 night 
                 stay to enjoy the place fully.</p>
@@ -218,10 +221,10 @@
 
             <article class="review-card review-card--featured">
               <div class="reviewer-info">
-                <img src="" alt="reviwer face">
+                <img src="/src/assets/reviewer2.webp" alt="reviwer face">
                 <h4>Mausum Baruah</h4>
               </div>
-                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <div class="stars" aria-label="5 out of 5 stars"><img src="src/assets/Stars.svg" alt="stars"></div>
                 <p>Perfect location. Situated by the side of the river amidst the 
                 hills and forest. Atmosphere is tranquil. A perfect place to spend 
                 time with your family and friends.</p>
@@ -229,69 +232,74 @@
 
             <article class="review-card">
               <div class="reviewer-info">
-                <img src="" alt="reviewer face">
+                <img src="/src/assets/reviewer3.webp" alt="reviewer face">
                 <h4>Bubul Nath</h4>
               </div>
-                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <div class="stars" aria-label="5 out of 5 stars"><img src="src/assets/Stars.svg" alt="stars"></div>
                 <p>Best place to stay near the river bank of Bhutan.</p>
             </article>
             </div>
           </section>
 
-          //CTA Section
+          <!-- CTA Section -->
           
           <section class="fire-cta">
           <div class="fire-cta-overlay" aria-hidden="true"></div>
-          <p class="fire-cta-quote">There's a seat by the fire waiting for you.</p>
-          <a href="pages/booking/" class="btn-primary">Reserve Your Seat</a>
+          <div class="fire-cta-content">
+            <p class="fire-cta-quote">There's a seat by the fire waiting for you.</p>
+            <a href="pages/booking/" class="btn-primary">Reserve Your Seat</a>
+          </div>
+          
           </section>
 
-          //Contact
+          <!-- Contact -->
 
           <section class="contact">
             <div class="contact-inner">
               <div class="contact-info">
                 <span class="section-tag">GET IN TOUCH</span>
-                <h2>We'd Love TOo Hear From You</h2>
+                <h2>We'd Love To Hear <br>From You</h2>
                 <div class="contact-details">
                   <div class="contact-items">
-                    <img src="" alt="email icon">
+                    <img src="/src/assets/icon-email.svg" alt="email icon">
                     <div>
                       <span class="contact-label">Email Us</span>
                       <a href="mailto:ldukpa@gmail.com">ldukpa@gmail.com</a>
                     </div>
                   </div>
                   <div class="contact-items">
-                    <img src="" alt="phone icon">
+                    <img src="/src/assets/icon-phone.svg" alt="phone icon">
                     <div>
                       <span class="contact-label">Call Us</span>
                       <a href="tel:+97517511141">+97517511141</a>
                     </div>
                   </div>
                   <div class="contact-items">
-                    <img src="" alt="location icon">
+                    <img src="/src/assets/icon-location.svg" alt="location icon">
                     <div>
                       <span class="contact-label">Location</span>
                       <address>Anthala, Panbang, Zhemgang, Bhutan</address>
                     </div>
                   </div>
                 </div>
-                <a href="pages/booking/">Get Directions</a>
+                <a href="pages/booking/" class="btn-learn">Get Directions</a>
               </div>
               <div class="contact-map">
-                <img src="" alt="Map Showing Panbang Ecolodge in Zhemgang, Bhutan">
+                <img src="/src/assets/map.svg" alt="Map Showing Panbang Ecolodge in Zhemgang, Bhutan">
               </div>
             </div>
           </section>
     </main>
 
     <footer>
-      <div class="footer-inner">
+      <div class="footer-content">
+        <div class="footer-inner">
         <div class="footer-brand">
-          <img src="" alt="Panbang Ecolodge Logo">
           <p class="footer-title">Panbang Ecolodge</p>
+          <img src="logoNav.svg" alt="Panbang Ecolodge Logo">
         </div>
-        <div class="footer-contact">
+        <div class="footer-column">
+          <div class="footer-contact">
           <h4>Contact Us</h4>
           <address>
             Anthala, Panbang,<br>
@@ -310,18 +318,22 @@
           </nav>
         </div>
         <div class="footer-social">
+          <h4>Follow Us</h4>
           <div class="social-links">
             <a href="#" aria-label="Panbang Ecolodge on Facebook" 
             target="_blank" rel="noopener noreferrer">
-            <img src="/images/facebook.svg" alt="Facebook">
+            <img src="src/assets/facebook.svg" alt="Facebook">
           </a>
           <a href="#" aria-label="Panbang Ecolodge on Instagram" 
             target="_blank" rel="noopener noreferrer">
-            <img src="/images/instagram.svg" alt="Instagram">
+            <img src="/src/assets/instragram.svg" alt="Instagram">
+        </a>
           </div>
+        </div>
         </div>
       </div>
       <p class="footer-copyright">Copyright © 2026. All Rights Reserved.</p>
+      </div>
     </footer>
 
     <script type="module" src="/src/main.js"></script>

@@ -241,8 +241,8 @@ template {
   --regular-spacing: 0.01em;
   --label-spacing: 0.03em;
   --btn-letter-spacing: 0.10em;
-  --title-letter-spacing: 0.05em;
   --footer-spacing: 0.20em;
+  --title-letter-spacing: 0.05em;
 
   /* Border Radius */
   --nav-btn-raidus: 8px;
@@ -437,6 +437,7 @@ template {
 .hero-image{
   position: relative;
   width: 60%;
+  flex-shrink: 0;
 }
 
 .hero-image img{
@@ -702,6 +703,7 @@ h2{
 .sectionFour{
   background-color: var(--color-bg-2);
   padding: 3.75rem 8rem;
+  margin-bottom: 6rem;
   background-image: url(assets/background-art.webp);
   background-size: contain;
   background-position: center;
@@ -728,11 +730,6 @@ h2{
   border-radius: var(--card-radius);
   padding: 2.25rem 2.25rem;
   box-shadow: 0px 4.5px 11.25px 0px rgba(82, 82, 82, 0.10);
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
-}
-
-.review-card:hover{
-  transform: translateY(-8px);
 }
 
 .reviewer-info{
@@ -782,303 +779,9 @@ h2{
 }
 
 .review-card--featured h4{
-  font-family: var(--font-body);
-  font-size: var(--text-subheading);
-  font-weight: var(--semibold);
-  line-height: var(--regular-height);
-  color: var(--primary-color);
-}
-
-.review-card--featured p{
-  font-family: var(--font-body);
-  font-size: var(--text-body);
-  font-weight: var(--regular);
-  line-height: var(--regular-height);
-  color: var(--secondary-color);
-}
-
-.review-card--featured h4{
   color: var(--color-bg-1);
 }
 
 .review-card--featured p{
   color: var(--color-bg-1);
-}
-
-/* Fire CTA */
-
-.fire-cta{
-  background-image: url(assets/fire.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 55vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.fire-cta-overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.70), rgba(5,10,5,0.05));
-  z-index: 1;
-}
-
-.fire-cta-content{
-  margin: 0 auto;
-  z-index: 2;
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.fire-cta-quote{
-  font-family: var(--font-heading);
-  font-size: var(--card-title);
-  font-weight: var(--regular);
-  line-height: var(--regular-height);
-  font-style: italic;
-  color: var(--color-bg-1);
-}
-
-.fire-cta-content a{
-  border: 1px solid var(--accent-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 9rem;
-  height: 2.5rem;
-  text-decoration: none;
-  border-radius: var(--nav-btn-raidus);
-  font-family: var(--font-body);
-  font-size: var(--card-body);
-  font-weight: var(--regular);
-  line-height: var(--regular-height);
-  letter-spacing: var(--btn-letter-spacing);
-  color: var(--color-bg-1);
-  letter-spacing: 0.1em;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
- /* Contact Section */
-
-.contact{
-  background-color: var(--color-bg-1);
-  min-height: 100vh;
-  padding: 3.75rem 8rem;
-}
-
-.contact-inner{
-  display: flex;
-  justify-content: center;
-  gap: 7rem;
-}
-
-.contact-info{
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.contact-info h2{
-  font-family: var(--font-heading);
-  font-size: var(--text-heading);
-  font-weight: var(--semibold);
-  line-height: var(--heading-height);
-  letter-spacing: var(--hero-letter);
-  margin-bottom: 1.25rem;
-}
-
-.contact-info .section-tag{
-  font-family: var(--font-body);
-  font-size: var(--text-label);
-  font-weight: var(--medium);
-  line-height: var(--heading-height);
-  letter-spacing: var(--hero-letter);
-}
-
-.contact-details{
-  display: flex;
-  flex-direction: column;
-  gap: 1.50rem;
-}
-
-.contact-items{
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.contact-items div{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.contact-items div a{
-  text-decoration: none;
-  font-family: var(--font-body);
-  font-size: var(--caption);
-  font-weight: var(--light);
-  line-height: var(--subheading-height);
-  letter-spacing: var(--regular-spacing);
-  color: var(--primary-color);
-}
-
-.contact-label{
-  font-family: var(--font-body);
-  font-size: var(--text-label);
-  font-weight: var(--medium);
-  line-height: var(--heading-height);
-  letter-spacing: var(--title-letter-spacing);
-  color: var(--secondary-color);
-}
-
-.contact-info .btn-learn{
-  margin-top: 2rem;
-  background-color: var(--accent-color);
-  color: var(--color-bg-1);
-}
-
-.contact-info .btn-learn:hover{
-  background-color: var(--color-bg-1);
-  color: var(--accent-color);
-}
-
- /* Contact Section */
-
-footer{
-  background-image: url(assets/bg-footer.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 535px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem 8rem;
-}
-
-.footer-column {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-}
-
-.footer-inner{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  margin-top: 2rem;
-  gap: 12rem;
-}
-
-
-.footer-brand{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 280px;
-}
-
-.footer-title{
-  font-family: var(--font-heading);
-  font-weight: var(--regular);
-  font-size: var(--footer-title);
-  line-height: var(--heading-height);
-  letter-spacing: var(--hero-letter);
-  color: var(--primary-color);
-  
-}
-
-.footer-brand img{
-  width: 120px;
-  height: 120px;
-  object-fit: contain
-}
-
-.footer-contact{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  font-family: var(--font-body);
-  font-weight: var(--regular);
-  font-size: var(--text-body);
-  line-height: var(--subheading-height);
-  letter-spacing: var(--regular-spacing);
-  color: var(--secondary-color);
-}
-
-.footer-contact a{
-  text-decoration: none;
-  color: var(--secondary-color);
-}
-
-.footer-links{
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-body);
-  font-weight: var(--regular);
-  font-size: var(--text-body);
-  line-height: var(--subheading-height);
-  letter-spacing: var(--regular-spacing);
-  color: var(--secondary-color);
-}
-
-.footer-links h4{
-  margin-bottom: 1.5rem;
-}
-
-.footer-links nav{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  
-}
-
-.footer-links nav a{
-  text-decoration: none;
-  color: var(--secondary-color);
-}
-
-.footer-social{
-  font-family: var(--font-body);
-  font-weight: var(--regular);
-  font-size: var(--text-body);
-  line-height: var(--subheading-height);
-  letter-spacing: var(--regular-spacing);
-  color: var(--secondary-color);
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-}
-
-.footer-social .social-links{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.footer-copyright{
-  text-decoration: none;
-  font-family: var(--font-body);
-  font-weight: var(--regular);
-  font-size: var(--caption);
-  line-height: var(--heading-height);
-  letter-spacing: var(--regular-spacing);
-  color: var(--caption-color);
-  text-align: center;
-  margin-top: 3rem;
-  width: 100%;
 }
