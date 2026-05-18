@@ -1,0 +1,125 @@
+.card-section{
+    background-color: var(--color-bg-1);
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-section .section-header{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 4rem;
+}
+
+.section-tag{
+    font-family: var(--font-body);
+    color: var(--accent-color);
+    font-weight: var(--light);
+    font-size: var(--text-label);
+    letter-spacing: var(--label-spacing);
+    line-height: var(--heading-height);
+}
+
+h2{
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-weight: var(--semibold);
+    font-size: var(--text-heading);
+    line-height: 1.1;
+    letter-spacing: var(--title-letter-spacing);
+}
+
+.section-header p{
+    font-family: var(--font-body);
+    font-size: var(--text-subheading);
+    font-weight: var(--regular);
+    line-height: var(--subheading-height);
+    letter-spacing: var(--regular-spacing);
+    color: var(--secondary-color);
+    max-width: 52ch;
+    text-align: center;
+}
+
+.thirdHeader{
+    max-width: 24ch;
+    text-align: center;
+}
+
+/* Card */
+
+.cards{
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+}
+
+.card__inner{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg-1);
+    border-radius: 12px;
+    overflow: hidden;
+    width: min(1000px, 100%);
+    height: 500px;
+    padding: 40px 60px;
+    gap: 75px;
+    will-change: transform;
+    transform-origin: center top;
+    border: 1px solid var(--accent-color);
+}
+
+.exp-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-label{
+    font-size: var(--button-text);
+    font-family: var(--font-body);
+    font-style: italic;
+    line-height: var(--heading-height);
+    letter-spacing: var(--label-spacing);
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.exp-body{
+    font-size: var(--text-subheading);
+    font-family: var(--font-body);
+    font-weight: var(--regular);
+    line-height: var(--subheading-height);
+    letter-spacing: var(--label-spacing);
+    color: var(--secondary-color);
+    margin-bottom: 6rem;
+}
+
+.exp-title{
+    font-size: var(--cta-text);
+    font-family: var(--font-heading);
+    font-weight: var(--semibold);
+    line-height: var(--heading-height);
+    letter-spacing: var(--hero-letter);
+    color: var(--primary-color);
+}
+
+.exp-image{
+    min-width: 340px;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.exp-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
