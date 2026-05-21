@@ -1,0 +1,60 @@
+.image-section{
+    background-color: var(--color-bg-1);
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-section .section-header{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 4rem;
+}
+
+h2{
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-weight: var(--semibold);
+    font-size: var(--text-heading);
+    line-height: 1.1;
+    letter-spacing: var(--title-letter-spacing);
+}
+
+.section-header p{
+    font-family: var(--font-body);
+    font-size: var(--text-subheading);
+    font-weight: var(--regular);
+    line-height: var(--subheading-height);
+    letter-spacing: var(--regular-spacing);
+    color: var(--secondary-color);
+    max-width: 52ch;
+    text-align: center;
+}
+
+.thirdHeader{
+    max-width: 24ch;
+    text-align: center;
+}
+
+/* Image */
+
+.image-holder{
+    display: grid;
+    grid-template-columns: repeat(3, 410px);
+    gap: 45px;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.gallery-item{
+    width: 410px;
+    height: 320px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--color-bg-2);
+}

@@ -112,7 +112,8 @@ h2{
 }
 
 .exp-image{
-    min-width: 340px;
+    width: 340px;
+    align-self: center;
     flex-shrink: 0;
     height: 100%;
 }
