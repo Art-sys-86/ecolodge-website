@@ -1,3 +1,68 @@
+:root{
+  /* colors */
+
+  --color-bg-1: #FAF8F4;
+  --color-bg-2: #F0EAD8;
+  --color-bg-3: #CADEB6;
+  --color-bg-4: #E8F2EC;
+  --primary-color: #1F3D22;
+  --secondary-color: #4A5E4C;
+  --accent-color: #3D7A45;
+  --caption-color: #7A8C7C;
+  
+  /* Fonts */
+
+  --font-heading: 'Cormorant Garamond', 'serif';
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Font Size */
+
+  --text-hero: 78px;
+  --text-heading: 54px;
+  --text-subheading: 20px;
+  --text-herosub: 22px;
+  --text-title: 40px;
+  --text-body: 18px;
+  --text-label: 16px;
+  --button-text: 14px;
+  --card-body: 12px;
+  --card-label: 10px;
+  --cta-text: 48px;
+  --footer-title: 28px;
+  --caption: 13px;
+  --card-title: 46px;
+  --smallest-size: 8px;
+  --text-mobile-heading: 30px;
+  /* Font Weight */
+
+  --regular: 400;
+  --extralight: 200;
+  --light: 300;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700; 
+
+  /* Line Height */
+  --heading-height: 0.85;
+  --regular-height: 1.4;
+  --subheading-height: 1.2;
+
+  /* Letter Spacing */
+  --hero-letter: -0.03em;
+  --regular-spacing: 0.01em;
+  --label-spacing: 0.03em;
+  --btn-letter-spacing: 0.10em;
+  --title-letter-spacing: 0.05em;
+  --footer-spacing: 0.20em;
+
+  /* Border Radius */
+  --nav-btn-raidus: 8px;
+  --btn-radius: 12px;
+  --card-radius: 18px;
+  --small-card-radius: 14px;
+
+}
+
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -192,71 +257,6 @@ template {
 
 [hidden] {
   display: none;
-}
-
-:root{
-  /* colors */
-
-  --color-bg-1: #FAF8F4;
-  --color-bg-2: #F0EAD8;
-  --color-bg-3: #CADEB6;
-  --color-bg-4: #E8F2EC;
-  --primary-color: #1F3D22;
-  --secondary-color: #4A5E4C;
-  --accent-color: #3D7A45;
-  --caption-color: #7A8C7C;
-  
-  /* Fonts */
-
-  --font-heading: 'Cormorant Garamond', 'serif';
-  --font-body: 'DM Sans', sans-serif;
-
-  /* Font Size */
-
-  --text-hero: 78px;
-  --text-heading: 54px;
-  --text-subheading: 20px;
-  --text-herosub: 22px;
-  --text-title: 40px;
-  --text-body: 18px;
-  --text-label: 16px;
-  --button-text: 14px;
-  --card-body: 12px;
-  --card-label: 10px;
-  --cta-text: 48px;
-  --footer-title: 28px;
-  --caption: 13px;
-  --card-title: 46px;
-  --smallest-size: 8px;
-  --text-mobile-heading: 30px;
-  /* Font Weight */
-
-  --regular: 400;
-  --extralight: 200;
-  --light: 300;
-  --medium: 500;
-  --semibold: 600;
-  --bold: 700; 
-
-  /* Line Height */
-  --heading-height: 0.85;
-  --regular-height: 1.4;
-  --subheading-heigt: 1.2;
-
-  /* Letter Spacing */
-  --hero-letter: -0.03em;
-  --regular-spacing: 0.01em;
-  --label-spacing: 0.03em;
-  --btn-letter-spacing: 0.10em;
-  --title-letter-spacing: 0.05em;
-  --footer-spacing: 0.20em;
-
-  /* Border Radius */
-  --nav-btn-raidus: 8px;
-  --btn-radius: 12px;
-  --card-radius: 18px;
-  --small-card-radius: 14px;
-
 }
 
 /* Site header and Nav bar */

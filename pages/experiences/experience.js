@@ -2,29 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardsContainer = document.querySelector('.cards');
     const cards = document.querySelectorAll('.card');
     const cardInners = Array.from(cards).map(card => card.querySelector('.card__inner'));
-    
+
     if (!cardsContainer || cards.length === 0) return;
 
     const cardCount = cards.length;
-    cardsContainer.style.setProperty('--cards-count', cardCount);
-
-    let containerTop = 0;
-    let cardHeight = 0;
     const cardData = [];
 
-        function updateLayoutMetrics() {
-        cardHeight = cards[0].clientHeight;
-        cardsContainer.style.setProperty('--card-height', `${cardHeight}px`);
-        
-        const rect = cardsContainer.getBoundingClientRect();
-        containerTop = rect.top + window.scrollY;
-
-        cardData.length = 0;
+    function updateLayoutMetrics() {
         cards.forEach((card, index) => {
             const offsetTop = 20 + index * 20;
             card.style.paddingTop = `${offsetTop}px`;
             const toScale = 1 - (cardCount - 1 - index) * 0.05;
-            cardData.push({ toScale });
+            cardData[index] = { toScale };
         });
     }
 
@@ -34,73 +23,58 @@ document.addEventListener('DOMContentLoaded', () => {
     let ticking = false;
 
     function animateCards() {
-        const scrolledInside = window.scrollY - containerTop;
-        const progress = scrolledInside / cardHeight;
-
-        for (let i = 0; i < cardCount; i++) {
+        cards.forEach((card, i) => {
             const cardInner = cardInners[i];
-            if (!cardInner) continue;
+            if (!cardInner) return;
+
+            const rect = card.getBoundingClientRect();
+            const viewportCenter = window.innerHeight / 2;
+            const cardCenter = rect.top + rect.height / 2;
+            const distanceFromCenter = cardCenter - viewportCenter;
+            const progress = -distanceFromCenter / rect.height;
 
             const data = cardData[i];
 
-            if (i === 0) {
-                if (progress <= 0) {
-                    cardInner.style.opacity = '1';
-                    cardInner.style.transform = 'scale(1)';
-                    cardInner.style.filter = 'brightness(1)';
-                } else if (progress > 0 && progress <= 1) {
-                    cardInner.style.opacity = (1 - progress).toString();
-                    cardInner.style.transform = `scale(${1 - progress * (1 - data.toScale)})`;
-                    cardInner.style.filter = `brightness(${1 - progress * 0.25})`;
-                } else {
-                    cardInner.style.opacity = '0';
-                    cardInner.style.transform = `scale(${data.toScale})`;
-                    cardInner.style.filter = 'brightness(0.75)';
-                }
-                continue;
-            }
-
             if (i === cardCount - 1) {
-                if (progress < i - 1) {
+                // Last card never fades out
+                if (progress < -0.5) {
                     cardInner.style.opacity = '0';
                     cardInner.style.transform = 'scale(1)';
                     cardInner.style.filter = 'brightness(1)';
-                } else if (progress >= i - 1 && progress < i) {
-                    const entranceProgress = progress - (i - 1);
+                } else {
+                    const entranceProgress = Math.min(1, (progress + 0.5) * 2);
                     cardInner.style.opacity = entranceProgress.toString();
                     cardInner.style.transform = 'scale(1)';
                     cardInner.style.filter = 'brightness(1)';
-                } else {
-                    cardInner.style.opacity = '1';
-                    cardInner.style.transform = 'scale(1)';
-                    cardInner.style.filter = 'brightness(1)';
                 }
-                continue;
+                return;
             }
 
-            if (progress < i - 1) {
+            if (progress < -0.5) {
+                // Card hasn't entered yet
                 cardInner.style.opacity = '0';
                 cardInner.style.transform = 'scale(1)';
                 cardInner.style.filter = 'brightness(1)';
-            } 
-            else if (progress >= i - 1 && progress < i) {
-                const entranceProgress = progress - (i - 1);
+            } else if (progress >= -0.5 && progress < 0) {
+                // Entering — fading in
+                const entranceProgress = (progress + 0.5) * 2;
                 cardInner.style.opacity = entranceProgress.toString();
                 cardInner.style.transform = 'scale(1)';
                 cardInner.style.filter = 'brightness(1)';
-            } 
-            else if (progress >= i && progress < i + 1) {
-                const exitProgress = progress - i;
+            } else if (progress >= 0 && progress < 0.5) {
+                // Centered — fully visible, hold here
+                cardInner.style.opacity = '1';
+                cardInner.style.transform = 'scale(1)';
+                cardInner.style.filter = 'brightness(1)';
+            } else {
+                // Exiting — fading out and scaling down
+                const exitProgress = (progress - 0.5) * 2;
                 cardInner.style.opacity = (1 - exitProgress).toString();
                 cardInner.style.transform = `scale(${1 - exitProgress * (1 - data.toScale)})`;
                 cardInner.style.filter = `brightness(${1 - exitProgress * 0.25})`;
-            } 
-            else {
-                cardInner.style.opacity = '0';
-                cardInner.style.transform = `scale(${data.toScale})`;
-                cardInner.style.filter = 'brightness(0.75)';
             }
-        }
+        });
+
         ticking = false;
     }
 
@@ -111,5 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { passive: true });
 
+    // Run once on load so first card isn't invisible
     animateCards();
 });
