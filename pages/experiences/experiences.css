@@ -25,7 +25,8 @@
     line-height: var(--heading-height);
 }
 
-h2{
+.card-section h2,
+.image-section h2{
     font-family: var(--font-heading);
     color: var(--primary-color);
     font-weight: var(--semibold);

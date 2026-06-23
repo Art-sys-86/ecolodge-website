@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/logoR.svg" />
+    <!-- Connects to Google's servers to load DM Sans and Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <meta name="description" content="Book your stay at Panbang Ecolodge in Zhemgang, Bhutan. Fill out the form and we'll confirm within 24 hours.">
+    <link rel="canonical" href="https://panbangecolodge.com/pages/booking/">
+    <title>Book Now - Panbang Ecolodge</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/pages/booking/book.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="/" class="nav-logo" aria-label="Panbang Ecolodge Home">
+                <img src="/logoNav.svg" alt="Panbang Ecolodge Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pages/experiences/">Experiences</a></li>
+                <li><a href="/pages/gallery/">Gallery</a></li>
+                <li><a href="/pages/about-us/">About Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="/pages/booking/" class="nav-cta">BOOK NOW</a><button class="nav-hamburger" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="shape left">
+                <div class="bodyContent">
+                    <h1>Connect Us At <br>Panbang Ecolodge</h1>
+                    <p class="firstPara">We would be delighted to welcome you to the Panbang Ecolodge! Reach out anytime to learn more about what awaits you at our lodge.</p>
+                    <p class="secondPara">We look forward to planning your perfect escape!</p>
+                </div>
+                <div class="getInTouch">
+                    <h3>Get In Touch:</h3>
+                    <div class="email">
+                        <div class="icon">
+                            <img src="/src/assets/icon-email.svg" alt="email icon">
+                        </div>
+                        <div class="contact-text">
+                            <p class="label">EMAIL US</p>
+                            <a href="mailto:ldukpa@gmail.com">ldukpa@gmail.com</a>
+                        </div>
+                        
+                    </div>
+
+                    <div class="phone">
+                        <div class="icon">
+                            <img src="/src/assets/icon-phone.svg" alt="phone icon">
+                        </div>
+                        <div class="contact-text">
+                            <p class="label">CALL US</p>
+                            <a href="tel:+97517511151">+975-17511151</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shape right">
+                <div class="title">
+                    <h2>Your Booking Details</h2>
+                    <p class="subHeading">Fill up the form and we'll confirm within 24 hours.</p>
+                </div>
+                <form action="" method="post">
+                    <div class="firstForm">
+                        <div class="firstName">
+                            <label for="firstName">First Name</label>
+                            <input type="text" name="firstName" id="firstName" required placeholder="Tenzin" />
+                        </div>
+                        <div class="lastName">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" required placeholder="Dorji" />
+                        </div>
+                    </div>
+                    <div class="emailForm">
+                        <label for="email">Email Address </label>
+                        <input type="email" name="email" id="email" required placeholder="someone@gmail.com" />
+                    </div>
+                    <div class="dateForm">
+                        <div class="checkIn">
+                            <label for="checkIn">CHECK IN</label>
+                            <input type="date" name="checkIn" id="checkIn" required>
+                        </div>
+                        <div class="checkOut">
+                            <label for="checkOut">CHECK OUT</label>
+                            <input type="date" name="checkOut" id="checkOut" required>
+                        </div>
+                    </div>
+                    <div class="guest">
+                        <div class="guestNo">
+                        <label for="guestRoom">GUEST</label>
+                        <select name="guestNumber" id="guestRoom">
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests+</option>
+                        </select>
+                        </div>
+
+                        <div class="roomType">
+                        <label for="roomType">ROOM TYPE</label>
+                        <select name="roomType" id="roomType">
+                            <option value="normalR">Standard Room</option>
+                            <option value="familyR">Family Room</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="messages">
+                        <label for="messages">SPECIAL REQUEST</label>
+                        <textarea name="messages" id="messages" placeholder="Any messages, requirement, special occasion..."></textarea>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-inner">
+            <div class="footer-brand">
+            <p class="footer-title">Panbang Ecolodge</p>
+            <img src="/logoNav.svg" alt="Panbang Ecolodge Logo">
+            </div>
+        <div class="footer-column">
+            <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <address>
+            Anthala, Panbang,<br>
+            Zhemgang, Bhutan
+            </address>
+            <a href="tel:+97517511151">+975 17511151</a>
+            <a href="tel:+97517584221">+975 17584221</a>
+            <a href="mailto:ldukpa@gmail.com">ldukpa@gmail.com</a>
+            </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <nav aria-label="footer-navigation">
+            <a href="/pages/experiences/">Experiences</a>
+            <a href="/pages/about-us/">About Us</a>
+            <a href="/pages/booking/">Book Now</a>
+            </nav>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+            <a href="#" aria-label="Panbang Ecolodge on Facebook" 
+            target="_blank" rel="noopener noreferrer">
+            <img src="/src/assets/facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Panbang Ecolodge on Instagram" 
+            target="_blank" rel="noopener noreferrer">
+            <img src="/src/assets/instragram.svg" alt="Instagram">
+        </a>
+            </div>
+        </div>
+        </div>
+        </div>
+        <p class="footer-copyright">Copyright © 2026. All Rights Reserved.</p>
+    </div>
+    </footer>
+    <script>
+    document.querySelectorAll('.guest select').forEach(select => {
+    select.addEventListener('focus', () => {
+        select.parentElement.classList.add('open');
+    });
+    select.addEventListener('blur', () => {
+        select.parentElement.classList.remove('open');
+    });
+    });
+    </script>
+</body>
+</html>

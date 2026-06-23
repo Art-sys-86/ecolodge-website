@@ -1,0 +1,359 @@
+main{
+    padding-top: 6rem;
+    background-color: var(--color-bg-1);
+}
+
+.content{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    border-block: 2px solid var(--accent-color);
+}
+
+.shape{
+    flex: 1;
+    padding: 0 6rem;
+}
+
+.left{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 6rem;
+    gap: 4rem;
+}
+
+.left h1{
+    font-family: var(--font-heading);
+    font-size: var(--cta-text);
+    font-weight: var(--regular);
+    line-height: var(--heading-height);
+    letter-spacing: var(--hero-letter);
+    color: var(--color-bg-1);
+}
+
+.bodyContent p{
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--regular);
+    line-height: var(--subheading-height);
+    letter-spacing: var(--regular-spacing);
+    color: var(--white-text);
+    opacity: 75%;
+}
+
+.firstPara{
+    margin-bottom: 1rem;
+}
+
+.left h3{
+    font-family: var(--font-body);
+    font-size: var(--text-label);
+    font-weight: var(--semibold);
+    line-height: var(--subheading-height);
+    letter-spacing: var(--regular-spacing);
+    color: var(--white-text);
+}
+
+.getInTouch .email, 
+.getInTouch .phone {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.getInTouch .email{
+    margin-top: 2rem;
+}
+
+.label{
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--medium);
+    line-height: var(--heading-height);
+    letter-spacing: var(--title-letter-spacing);
+    color: var(--white-text);
+    opacity: 75%;
+    margin-bottom: 0.5rem;
+}
+
+.getInTouch .email a,
+.getInTouch .phone a{
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--medium);
+    line-height: var(--heading-height);
+    letter-spacing: var(--title-letter-spacing);
+    color: var(--white-text);
+    opacity: 90%;
+}
+
+.getInTouch .email img,
+.getInTouch .phone img{
+    border-radius: 6px;
+}
+
+
+.right{
+    margin-top: 1rem;
+}
+
+.title{
+    margin-bottom: 2rem;
+}
+
+.title h2{
+    font-family: var(--font-heading);
+    font-size: var(--text-title);
+    font-weight: var(--semibold);
+    line-height: var(--subheading-height);
+    letter-spacing: var(--regular-spacing);
+}
+
+.title p{
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--regular);
+    line-height: var(--heading-height);
+    letter-spacing: var(--regular-spacing);
+}
+
+form .firstForm{
+    display: flex;
+    gap: 1rem;
+}
+
+form .firstForm .firstName,
+form .firstForm .lastName {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+form .firstForm label{
+    margin-bottom: 2px;
+    font-family: var(--font-body);
+    font-size: var(--card-body);
+    font-weight: var(--semibold);
+    letter-spacing: var(--regular-spacing);
+    color: var(--primary-color);
+}
+
+form .firstForm input {
+    border: none;
+    border-bottom: 1px solid var(--caption-color);
+    background: transparent;
+    padding: 0.5rem 0;
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--regular);
+    color: var(--primary-color);
+    outline: none;
+    width: 100%;
+}
+
+form .firstForm .firstName{
+    display: flex;
+    flex-direction: column;
+}
+
+form .firstForm .lastName{
+    display: flex;
+    flex-direction: column;
+}
+
+form .firstForm input::placeholder {
+    color: var(--secondary-color);
+    opacity: 0.6;
+}
+
+form .emailForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+form .emailForm label {
+    font-family: var(--font-body);
+    font-size: var(--card-body);
+    font-weight: var(--semibold);
+    letter-spacing: var(--regular-spacing);
+    color: var(--primary-color);
+    margin-bottom: 2px;
+}
+
+form .emailForm input {
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    background: transparent;
+    padding: 0.5rem 0;
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--regular);
+    color: var(--primary-color);
+    outline: none;
+    width: 100%;
+}
+
+form .emailForm input::placeholder {
+    color: var(--secondary-color);
+    opacity: 0.6;
+}
+
+
+form .dateForm {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+form .dateForm .checkIn,
+form .dateForm .checkOut {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+form .dateForm label {
+    font-family: var(--font-body);
+    font-size: var(--card-body);
+    font-weight: var(--semibold);
+    letter-spacing: var(--regular-spacing);
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+form .dateForm input {
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    background: transparent;
+    padding: 0.5rem 0;
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--regular);
+    color: var(--secondary-color);
+    outline: none;
+    width: 100%;
+}
+
+form .guest {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+form .guest .guestNo,
+form .guest .roomType {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+}
+
+form .guest label {
+    font-family: var(--font-body);
+    font-size: var(--card-body);
+    font-weight: var(--semibold);
+    letter-spacing: var(--regular-spacing);
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+form .guest select {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    background: transparent;
+    padding: 0.5rem 2rem 0.5rem 0;
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--regular);
+    color: var(--primary-color);
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+form .guest .guestNo::after,
+form .guest .roomType::after {
+    content: '▾';
+    position: absolute;
+    right: 0;
+    bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+form .guest .guestNo.open::after,
+form .guest .roomType.open::after {
+    transform: rotate(180deg);
+}
+
+form .messages {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+form .messages label {
+    font-family: var(--font-body);
+    font-size: var(--card-body);
+    font-weight: var(--semibold);
+    letter-spacing: var(--regular-spacing);
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+form .messages textarea {
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    background: transparent;
+    padding: 0.5rem 0;
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--regular);
+    color: var(--primary-color);
+    outline: none;
+    width: 100%;
+    resize: none;
+    min-height: 2.5rem;
+}
+
+form .messages textarea::placeholder {
+    color: var(--secondary-color);
+    opacity: 0.6;
+}
+
+/* Submit */
+
+form .submit {
+    margin-top: 2.5rem;
+}
+
+form .submit button {
+    background-color: var(--accent-color);
+    color: var(--color-bg-1);
+    font-family: var(--font-body);
+    font-size: var(--button-text);
+    font-weight: var(--semibold);
+    letter-spacing: var(--label-spacing);
+    border: none;
+    border-radius: 50px;
+    padding: 0.85rem 2.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 3.42px 5.7px 3.42px rgba(0, 0, 0, 0.25);
+}
+
+form .submit button:hover {
+    background-color: var(--primary-color);
+    box-shadow: none;
+}

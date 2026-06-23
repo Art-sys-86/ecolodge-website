@@ -5,7 +5,6 @@ main{
 
 .ourStory{
     padding: 0 8rem;
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
 }
@@ -14,7 +13,7 @@ main{
     text-align: center;
 }
 
-h1{
+.ourStory h1{
     font-family: var(--font-heading);
     font-size: var(--text-heading);
     font-weight: var(--semibold);
@@ -42,7 +41,7 @@ h1{
     gap: 30px;
 }
 
-h2{
+.ourStory h2, .ownerHistory h2, .vision-content h2{
     font-family: var(--font-heading);
     font-size: var(--cta-text);
     font-weight: var(--semibold);
