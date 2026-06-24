@@ -319,7 +319,7 @@ h2{
   text-decoration: none;
   color: var(--accent-color);
   border-radius: var(--nav-btn-raidus);
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   font-family: var(--font-body);
   font-weight: var(--bold);
   letter-spacing: 0.1em;
