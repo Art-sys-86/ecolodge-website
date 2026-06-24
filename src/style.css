@@ -275,6 +275,13 @@ template {
 .nav-logo{
   padding: 0.4em 0;
 }
+
+.nav-logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
 .site-nav{
   display: flex;
   justify-content: space-between;
