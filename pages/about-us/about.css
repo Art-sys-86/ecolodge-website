@@ -346,3 +346,131 @@ main{
     line-height: var(--regular-height);
     letter-spacing: var(--label-spacing);
 }
+
+@media (max-width: 768px) {
+
+    /* Our Story */
+    .ourStory {
+        padding: 0 2rem;
+    }
+
+    h1 {
+        font-size: var(--cta-text);
+    }
+
+    .divider img{
+    display: none;
+    }
+
+    /* History */
+    .history {
+        flex-direction: column;
+    }
+
+    .history-text {
+        width: 100%;
+    }
+
+    .history-text h2{
+        margin-bottom: 1rem;
+    }
+
+    .img-box {
+        max-height: 250px;
+        width: 100%;
+    }
+
+    /* Owner */
+    .ownerHistory {
+        flex-direction: column;
+        gap: 2rem;
+        margin: 2rem 0 3rem 0;
+    }
+
+    .ownerPic img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    .ownerQuote {
+        font-size: var(--text-subheading);
+    }
+
+    .ourStory h2, .ownerHistory h2, .vision-content h2{
+        font-size: var(--text-title);
+    }
+
+    /* Vision */
+    .vision {
+        min-height: 40vh;
+        padding: 0 2rem;
+    }
+
+    .vision-content {
+        padding: 0 1rem;
+    }
+
+    .vision-content h2 {
+        font-size: var(--footer-title);
+    }
+
+    .visionQuote {
+        font-size: var(--text-label);
+    }
+
+    /* Why Choose */
+    .why-choose-section {
+        padding: 3rem 2rem;
+    }
+
+    .why-header h2 {
+        font-size: var(--footer-title);
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card-fullwidth {
+        grid-column: 1;
+        max-width: 100%;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .card-number {
+        width: 32px;
+        height: 32px;
+        font-size: var(--text-label);
+    }
+
+    /* Community Benefits */
+    .community-benefit {
+        padding: 2rem 0;
+    }
+
+    .community-header {
+        padding: 2rem 2rem 1rem 2rem;
+    }
+
+    .community-header h3 {
+        font-size: var(--footer-title);
+    }
+
+    .benefit-cell {
+        min-height: 200px;
+        padding: 2rem;
+    }
+
+    .benefit-cell h4 {
+        font-size: var(--text-subheading);
+    }
+
+    .benefit-cell .table-parag {
+        font-size: var(--card-body);
+    }
+}

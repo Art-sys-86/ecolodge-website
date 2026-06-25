@@ -744,9 +744,11 @@ h2{
     font-size: var(--card-label);
     margin-bottom: 0.75rem;
   }
-  .btn-learn{
-    width: 5rem;
-    height: 1.75rem;
+
+  .btn-learn {
+    width: 6rem;
+    height: 2rem;
+    font-size: var(--card-label);
   }
 
   /* Reviewer */
@@ -827,6 +829,7 @@ h2{
 
   .contact-info .btn-learn{
     margin-top: 1rem;
+    font-size: var(--smallest-size);
   }
 
   .contact-map{

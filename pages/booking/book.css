@@ -357,3 +357,68 @@ form .submit button:hover {
     background-color: var(--primary-color);
     box-shadow: none;
 }
+
+@media (max-width: 768px){
+    main {
+    padding-top: 4rem;
+}
+
+.content {
+    flex-direction: column;
+    height: auto;
+    min-height: unset;
+}
+
+.shape {
+    padding: 0;
+}
+
+.left {
+    padding: 2.5rem 1.5rem;
+    gap: 2rem;
+}
+
+.left h1 {
+    font-size: 32px;
+}
+
+.bodyContent p {
+    font-size: var(--card-body);
+}
+
+.getInTouch .email {
+    margin-top: 1rem;
+}
+
+.right {
+    padding: 2rem 1.5rem;
+    margin-top: 0;
+}
+
+.title h2 {
+    font-size: 24px;
+}
+
+.title {
+    margin-bottom: 1.5rem;
+}
+
+form .firstForm {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form .dateForm {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form .guest {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form .submit button {
+    width: 100%;
+}
+}
