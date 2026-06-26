@@ -75,8 +75,8 @@
                     <h2>Your Booking Details</h2>
                     <p class="subHeading">Fill up the form and we'll confirm within 24 hours.</p>
                 </div>
-                <form method="post" data-netlify="true" onsubmit="submit">
-                    
+                <form method="post" data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field">
+                    <input style="position: absolute; left: -9000px; opacity: 0;" name="bot-field" autocomplete="off">
                     <div class="firstForm">
                         <div class="firstName">
                             <label for="firstName">First Name</label>
