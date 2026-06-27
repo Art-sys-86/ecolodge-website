@@ -19,3 +19,9 @@ document.addEventListener('click', (e) => {
     navHamburger.setAttribute('aria-expanded', false);
     }
 });
+
+document.querySelectorAll('.lodge-card').forEach(card => {
+    card.addEventListener('click', () => {
+        window.location.href = '/pages/experiences/';
+    });
+});

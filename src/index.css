@@ -229,7 +229,7 @@ h2{
   letter-spacing: var(--title-letter-spacing);
   text-transform: uppercase;
   text-underline-offset: 6px;
-  text-decoration-color: var(--primary-color)
+  text-decoration-color: var(--primary-color);
 }
 
 .card-featured{
@@ -366,7 +366,6 @@ h2{
 }
 
 .review-card{
-  cursor: pointer;
   text-align: center;
   display: flex;
   flex-direction: column;

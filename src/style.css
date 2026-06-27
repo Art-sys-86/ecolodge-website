@@ -485,6 +485,11 @@ footer{
   gap: 1rem;
 }
 
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
+
 .footer-copyright{
   text-decoration: none;
   font-family: var(--font-body);
