@@ -79,13 +79,18 @@ h2{
 }
 
 @media(max-width: 768px){
-    .section-header h1{
+.section-header h1{
     font-size: var( --text-mobile-heading);
 }
-    .image-holder {
+.image-holder {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     width: 90%;
+}
+
+.image-section .section-header{
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 
 .gallery-item {
