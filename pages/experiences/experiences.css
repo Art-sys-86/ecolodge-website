@@ -8,11 +8,11 @@
 
 .card-section .section-header{
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     padding-top: 4rem;
 }
 
@@ -44,6 +44,7 @@
     color: var(--secondary-color);
     max-width: 52ch;
     text-align: center;
+    margin: 0;
 }
 
 .thirdHeader{
@@ -51,6 +52,14 @@
     text-align: center;
 }
 
+.section-header h1{
+    font-family: var(--font-heading);
+    font-weight: var(--semibold);
+    font-size: var(--text-heading);
+    letter-spacing: var(--title-letter-spacing);
+    line-height: 1.1;
+    margin: 0;
+}
 /* Card */
 
 .cards{
@@ -127,13 +136,23 @@
 }
 
 @media (max-width: 768px) {
-    .card-section h2 {
+.card-section h1,
+.card-section h2 {
     font-size: 32px;
+    letter-spacing: normal;
+}
+
+.card-section .section-header{
+    gap: 0.5rem;
 }
 
 .section-header p {
     font-size: var(--text-label);
     max-width: 90%;
+}
+
+h1{
+    font-size: var( --text-mobile-heading);
 }
 
 .card__inner {

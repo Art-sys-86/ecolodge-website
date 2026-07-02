@@ -4,16 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/logoR.svg" />
-    <!-- Connects to Google's servers to load DM Sans and Cormorant Garamond -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/src/assets/hero.webp" fetchpriority="high">
-    <link rel="preload" as="image" href="/src/assets/bg-footer.webp">
+
     <link rel="preload" as="image" href="/logoNav.webp" fetchpriority="high">
-    <meta name="description" content="Book your stay at Panbang Ecolodge in Zhemgang, Bhutan. Fill out the form and we'll confirm within 24 hours.">
+
+    <!-- Primary SEO -->
+    <title>Book Now — Panbang Ecolodge | Eco-Lodge in Zhemgang, Bhutan</title>
+    <meta name="description" content="Book your stay at Panbang Ecolodge in Zhemgang, Bhutan. Fill out the form and we'll confirm within 24 hours. Community eco-lodge at the gateway to Royal Manas National Park.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Book Now — Panbang Ecolodge | Zhemgang, Bhutan">
+    <meta property="og:description" content="Book your stay at Panbang Ecolodge. Community eco-lodge at the gateway to Royal Manas National Park, Zhemgang, Bhutan.">
+    <meta property="og:image" content="https://panbangecolodge.com/src/assets/hero.webp">
+    <meta property="og:url" content="https://panbangecolodge.com/pages/booking/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Panbang Ecolodge">
+
+    <!-- Twitter Card: ADDED -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book Now — Panbang Ecolodge | Zhemgang, Bhutan">
+    <meta name="twitter:description" content="Book your stay at Panbang Ecolodge. Community eco-lodge at the gateway to Royal Manas National Park.">
+    <meta name="twitter:image" content="https://panbangecolodge.com/src/assets/hero.webp">
+
+    <!-- Canonical -->
     <link rel="canonical" href="https://panbangecolodge.com/pages/booking/">
-    <title>Book Now - Panbang Ecolodge</title>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LodgingReservation",
+        "name": "Book a Stay at Panbang Ecolodge",
+        "url": "https://panbangecolodge.com/pages/booking/",
+        "reservationFor": {
+            "@type": "LodgingBusiness",
+            "name": "Panbang Ecolodge",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Anthala, Panbang",
+                "addressLocality": "Zhemgang",
+                "addressCountry": "BT"
+            },
+            "telephone": "+97517511151",
+            "email": "ldukpa@gmail.com"
+        }
+    }
+    </script>
+
     <link rel="stylesheet" href="/src/style.css">
     <link rel="stylesheet" href="/pages/booking/book.css">
 </head>

@@ -36,6 +36,15 @@ h2{
     text-align: center;
 }
 
+.section-header h1{
+    font-family: var(--font-heading);
+    font-weight: var(--semibold);
+    font-size: var(--text-heading);
+    letter-spacing: var(--title-letter-spacing);
+    line-height: 1.1;
+    margin: 0;
+}
+
 .thirdHeader{
     max-width: 24ch;
     text-align: center;
@@ -70,6 +79,9 @@ h2{
 }
 
 @media(max-width: 768px){
+    .section-header h1{
+    font-size: var( --text-mobile-heading);
+}
     .image-holder {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
