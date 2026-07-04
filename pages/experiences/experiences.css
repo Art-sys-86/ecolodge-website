@@ -159,10 +159,15 @@ h1{
     flex-direction: column;
     height: auto;
     padding: 0;
-    gap: 24px;
+    gap: 32px;
     border-radius: 12px;
     width: 90%;
 }
+
+.card:not(:last-child) {
+    margin-bottom: 48px;
+}
+
 
 .exp-image {
     width: 100%;
@@ -172,8 +177,8 @@ h1{
 
 .exp-image img {
     border-radius: 12px 12px 0 0;
-    object-position: center bottom;
-    object-fit: fill;
+    object-position: center;
+    object-fit: cover;
 }
 
 .exp-content {

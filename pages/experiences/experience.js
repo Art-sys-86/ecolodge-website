@@ -7,8 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cardCount = cards.length;
     const cardData = [];
+    const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+    function clearInlineStyles() {
+        cards.forEach(card => { card.style.paddingTop = ''; });
+        cardInners.forEach(cardInner => {
+            if (!cardInner) return;
+            cardInner.style.opacity = '';
+            cardInner.style.transform = '';
+            cardInner.style.filter = '';
+        });
+    }
 
     function updateLayoutMetrics() {
+        if (mobileQuery.matches) return;
+
         cards.forEach((card, index) => {
             const offsetTop = 20 + index * 20;
             card.style.paddingTop = `${offsetTop}px`;
@@ -17,12 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    updateLayoutMetrics();
-    window.addEventListener('resize', updateLayoutMetrics);
-
     let ticking = false;
 
     function animateCards() {
+        if (mobileQuery.matches) { ticking = false; return; }
+
         cards.forEach((card, i) => {
             const cardInner = cardInners[i];
             if (!cardInner) return;
@@ -32,11 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const cardCenter = rect.top + rect.height / 2;
             const distanceFromCenter = cardCenter - viewportCenter;
             const progress = -distanceFromCenter / rect.height;
-
             const data = cardData[i];
 
             if (i === cardCount - 1) {
-                // Last card never fades out
                 if (progress < -0.5) {
                     cardInner.style.opacity = '0';
                     cardInner.style.transform = 'scale(1)';
@@ -51,23 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (progress < -0.5) {
-                // Card hasn't entered yet
                 cardInner.style.opacity = '0';
                 cardInner.style.transform = 'scale(1)';
                 cardInner.style.filter = 'brightness(1)';
             } else if (progress >= -0.5 && progress < 0) {
-                // Entering — fading in
                 const entranceProgress = (progress + 0.5) * 2;
                 cardInner.style.opacity = entranceProgress.toString();
                 cardInner.style.transform = 'scale(1)';
                 cardInner.style.filter = 'brightness(1)';
             } else if (progress >= 0 && progress < 0.5) {
-                // Centered — fully visible, hold here
                 cardInner.style.opacity = '1';
                 cardInner.style.transform = 'scale(1)';
                 cardInner.style.filter = 'brightness(1)';
             } else {
-                // Exiting — fading out and scaling down
                 const exitProgress = (progress - 0.5) * 2;
                 cardInner.style.opacity = (1 - exitProgress).toString();
                 cardInner.style.transform = `scale(${1 - exitProgress * (1 - data.toScale)})`;
@@ -78,13 +84,28 @@ document.addEventListener('DOMContentLoaded', () => {
         ticking = false;
     }
 
+    function handleBreakpointChange() {
+        clearInlineStyles();
+        updateLayoutMetrics();
+        if (!mobileQuery.matches) animateCards();
+    }
+
+    updateLayoutMetrics();
+    window.addEventListener('resize', updateLayoutMetrics);
+
     window.addEventListener('scroll', () => {
+        if (mobileQuery.matches) return;
         if (!ticking) {
             window.requestAnimationFrame(animateCards);
             ticking = true;
         }
     }, { passive: true });
 
-    // Run once on load so first card isn't invisible
-    animateCards();
+    mobileQuery.addEventListener('change', handleBreakpointChange);
+
+    if (mobileQuery.matches) {
+        clearInlineStyles();
+    } else {
+        animateCards();
+    }
 });
